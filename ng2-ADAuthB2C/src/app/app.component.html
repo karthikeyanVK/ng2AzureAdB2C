@@ -1,7 +1,9 @@
 <h1>
   {{title}}
-  <button (click)="login()">Tasks</button>
+  <button (click)="login()">Login</button>
   <button (click)="logout()">Logout</button>
-  <a routerLink="/Tasks" routerLinkActive="active">List of Tasks</a>
-   <router-outlet></router-outlet>
+  <p>
+    <a routerLink="/Tasks" routerLinkActive="active">List of Tasks</a>
+  </p>
 </h1>
+<router-outlet></router-outlet>

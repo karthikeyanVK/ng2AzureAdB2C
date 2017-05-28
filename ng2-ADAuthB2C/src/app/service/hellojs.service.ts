@@ -14,7 +14,7 @@ export class HellojsService {
       adB2CEditProfile: applicationId
 
     }, {  
-        redirect_uri: '../',
+        redirect_uri: '',
         scope: 'openid ' + applicationId,
         response_type: 'token id_token'
         
@@ -30,9 +30,12 @@ export class HellojsService {
     this.hellojs.use(network).login({ display: "page" }, null)
       .then(function (auth) {
         console.log(auth);
+        return;
       }, function (e) {
         console.log('Signin error: ' + e.error.message);
+        return;
       });
+      return;
   }
   private getPolicyConfiguredData(policyName, azureAppPolicyName) {
 
